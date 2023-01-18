@@ -1,0 +1,860 @@
+{
+	"easycom": {
+		"^u-(.*)": "@/uview-ui/components/u-$1/u-$1.vue"
+	},
+	// "condition": { //模式配置，仅开发期间生效
+	// 	"current": 0, //当前激活的模式(list 的索引项)
+	// 	"list": [{
+	// 		"name": "test", //模式名称
+	// 		"path": "pages/componentsC/test/index", //启动页面，必选
+	// 		"query": "uuid=c4bba940-f69e-11ea-a419-6bafda9d095e&__id__=1" //启动参数，在页面的onLoad函数里面得到
+	// 	}]
+	// },
+	"pages": [{
+			"path": "pages/login/index",
+			"style": {
+				"navigationBarTitleText": "登录",
+				"navigationStyle": "custom",
+				"app-plus": {
+					// "scrollIndicator": false ,//禁用原生导航栏
+					
+					"scrollIndicator":"none"//移动端隐藏滚动条
+				}
+			}
+		},
+		// 统一首页
+		{
+			"path": "pages/home/index",
+			"style": {
+				 "navigationBarTitleText": "首页",
+				 "enablePullDownRefresh": true,  //设置为true表示当前页面开启下拉刷新
+				  "backgroundTextStyle": "dark" , //下拉 loading 的样式，仅支持 dark/light
+                   "navigationStyle": "custom",	
+				// "navigationBarBackgroundColor":"#02ac64",
+				  "app-plus": {
+					"scrollIndicator": false //禁用原生导航栏
+				  }
+			}
+		},
+		// 统一消息
+		{
+			"path": "pages/messageBox/messageBox",
+			"style": {
+				"navigationBarTitleText": "消息",
+				"enablePullDownRefresh": true,  //设置为true表示当前页面开启下拉刷新
+				"app-plus": {
+					"scrollIndicator": false //禁用原生导航栏
+				}
+			}
+		},
+		// 统一任务
+		{
+			"path": "pages/missionBox/missionBox",
+			"style": {
+				"navigationBarTitleText": "任务",
+				"enablePullDownRefresh": true,  //设置为true表示当前页面开启下拉刷新
+				"app-plus": {
+					"scrollIndicator": false //禁用原生导航栏
+				}
+			}
+		},
+		// 统一公海
+		{
+			"path": "pages/mixtureBox/mixtureBox",
+			"style": {
+				"navigationBarTitleText": "公海",
+				 "enablePullDownRefresh": true,  //设置为true表示当前页面开启下拉刷新
+				 // "backgroundTextStyle": "dark" , //下拉 loading 的样式，仅支持 dark/light
+
+				"app-plus": {
+					"scrollIndicator": false //禁用原生导航栏
+				}
+			}
+		},
+		{
+			"path": "pages/mine/mine",
+			"style": {
+				"navigationBarTitleText": "我的",
+				"enablePullDownRefresh": true,  //设置为true表示当前页面开启下拉刷新
+				"navigationStyle": "custom",
+				// "navigationBarBackgroundColor":"#02ac64",
+				"app-plus": {
+					
+					
+					"scrollIndicator": false //禁用原生导航栏
+					
+				}
+			}
+		},
+		// 我的余额
+		{
+			"path": "pages/mine/myBalance/myBalance",
+			"style": {
+				"navigationBarTitleText": "我的余额",
+				// "navigationStyle":"custom",
+				"app-plus": {
+					
+					
+					"scrollIndicator": false //禁用原生导航栏
+					
+				}
+				
+			}
+		},
+		// 我的-费用详情
+		{
+			"path": "pages/mine/costDetails/costDetails",
+			"style": {
+				"navigationBarTitleText": "费用详情",
+				"app-plus": {
+					"scrollIndicator": false //禁用原生导航栏
+				}
+			}
+		},
+		// 我的合同-非客户
+		{
+			"path": "pages/mine/contractNotKH/contractNotKH",
+			"style": {
+				"navigationBarTitleText": "我的合同",
+				"app-plus": {
+					"scrollIndicator": false //禁用原生导航栏
+				}
+			}
+		},
+		// 我的-关于我们
+		{
+			"path": "pages/mine/aboutUs/aboutUs",
+			"style": {
+				"navigationBarTitleText": "关于我们"
+				
+			}
+		},
+		// 我的-关于我们-协议
+		{
+			"path": "pages/mine/aboutUs/agreement/agreement",
+			"style": {
+				"navigationBarTitleText": "协议"
+				
+			}
+		},
+		// 我的-帮助中心
+		{
+			"path": "pages/mine/helpCenter/helpCenter",
+			"style": {
+				"navigationBarTitleText": "帮助中心"
+				
+			}
+		}
+		
+    ],
+	"subPackages": [
+		{
+		"root": "pageBoss",
+		"pages": [
+			//  老板——首页-代办事项-详情
+			{
+				"path": "boss/homePage/commissionMatter/particulars/particulars",
+				"style": {
+					"navigationBarTitleText": "代办事项",
+					"enablePullDownRefresh": true,  //设置为true表示当前页面开启下拉刷新
+					"app-plus": {
+						"scrollIndicator": false //禁用原生导航栏
+					}
+				}
+			},
+			//  老板——首页-代办事项-驳回
+			{
+				"path": "boss/homePage/commissionMatter/particulars/turnDown/turnDown",
+				"style": {
+					"navigationBarTitleText": "驳回",
+					"enablePullDownRefresh": true,  //设置为true表示当前页面开启下拉刷新
+					"app-plus": {
+						"scrollIndicator": false //禁用原生导航栏
+					}
+				}
+			},
+			//  老板——首页-客户数
+			{
+				"path": "boss/homePage/clientNumber/clientNumber",
+				"style": {
+					"navigationBarTitleText": "客户数",
+					"enablePullDownRefresh": true,  //设置为true表示当前页面开启下拉刷新
+					"app-plus": {
+						"scrollIndicator": false //禁用原生导航栏
+					}
+				}
+			},
+			//  老板——首页-支出数
+			{
+				"path": "boss/homePage/expenditure/expenditure",
+				"style": {
+					"navigationBarTitleText": "支出额",
+					"enablePullDownRefresh": true,  //设置为true表示当前页面开启下拉刷新
+					"app-plus": {
+						"scrollIndicator": false //禁用原生导航栏
+					}
+				}
+			},
+			//  老板——首页-收入
+			{
+				"path": "boss/homePage/income/income",
+				"style": {
+					"navigationBarTitleText": "收入额",
+					"app-plus": {
+						"scrollIndicator": false //禁用原生导航栏
+					}
+				}
+			},
+			//  老板——首页-订单数
+			{
+				"path": "boss/homePage/orderQuantity/orderQuantity",
+				"style": {
+					"navigationBarTitleText": "订单数",
+					"app-plus": {
+						"scrollIndicator": false //禁用原生导航栏
+					}
+				}
+			}
+		]
+	},
+	{
+		"root":"pageYwzg",
+		"pages":[
+			// 业务主管——首页-客户跟进提醒
+			{
+				"path": "executive/homePage/clientFollowUpRemind/clientFollowUpRemind",
+				"style": {
+					"navigationBarTitleText": "客户跟进提醒",
+					"app-plus": {
+						"scrollIndicator": false //禁用原生导航栏
+					}
+				}
+			},
+			// 业务主管——首页-客户跟进提醒-我的客户
+			{
+				"path": "executive/homePage/clientFollowUpRemind/myClient/myClient",
+				"style": {
+					"navigationBarTitleText": "我的客户",
+					"app-plus": {
+						"scrollIndicator": false //禁用原生导航栏
+					}
+				}
+			},
+			// 业务主管——首页-待审核提醒
+			{
+				"path": "executive/homePage/toAuditRemind/toAuditRemind",
+				"style": {
+					"navigationBarTitleText": "待审核提醒",
+					"app-plus": {
+						"scrollIndicator": false //禁用原生导航栏
+					}
+				}
+			},
+			// 业务主管——首页-待审核提醒-详情
+			{
+				"path": "executive/homePage/toAuditRemind/particulars/particulars",
+				"style": {
+					"navigationBarTitleText": "详情",
+					"app-plus": {
+						"scrollIndicator": false //禁用原生导航栏
+					}
+				}
+			},
+			{
+				"path": "executive/homePage/toAuditRemind/particulars/reject/reject",
+				"style": {
+					"navigationBarTitleText": "确认驳回"
+				}
+			},
+			//  业务主管——首页-订单异常
+			{
+				"path": "executive/homePage/abnormalOrders/abnormalOrders",
+				"style": {
+					"navigationBarTitleText": "订单异常",
+					"app-plus": {
+						"scrollIndicator": false //禁用原生导航栏
+					}
+				}
+			},
+			//  业务主管——首页-续签客户提醒
+			{
+				"path": "executive/homePage/renewClientRemind/renewClientRemind",
+				"style": {
+					"navigationBarTitleText": "续签客户提醒",
+					"app-plus": {
+						"scrollIndicator": false //禁用原生导航栏
+					}
+				}
+			},
+			//  业务主管——首页-公海消息提醒
+			{
+				"path": "executive/homePage/highSeas/highSeas",
+				"style": {
+					"navigationBarTitleText": "公海消息提醒",
+					"app-plus": {
+						"scrollIndicator": false //禁用原生导航栏
+					}
+				}
+			},
+			//  业务主管——首页-我的客户
+			{
+				"path": "executive/homePage/myClient/myClient",
+				"style": {
+					"navigationBarTitleText": "我的客户",
+					"enablePullDownRefresh": true,  //设置为true表示当前页面开启下拉刷新
+					"app-plus": {
+						"scrollIndicator": false //禁用原生导航栏
+					}
+			
+				}
+			},
+			//  业务主管——首页-我的客户-订单
+			{
+				"path": "executive/homePage/myClient/orderForm/orderForm",
+				"style": {
+					"navigationBarTitleText": "订单"
+					
+				}
+			},
+			//  业务主管——首页-我的客户-跟进
+			{
+				"path": "executive/homePage/myClient/followUp/followUp",
+				"style": {
+					"navigationBarTitleText": "跟进",
+					"app-plus": {
+						"scrollIndicator": false //禁用原生导航栏
+					}
+				}
+			},
+			//  业务主管——首页-我的客户-查看跟进记录
+			{
+				"path": "executive/homePage/myClient/followUp/lookOrFllow/lookOrFllow",
+				"style": {
+					"navigationBarTitleText": "查看跟进记录"
+				}
+			},
+			//  业务主管——首页-客户总数
+			{
+				"path": "executive/homePage/clientSum/clientSum",
+				"style": {
+					"navigationBarTitleText": "客户总数",
+					"enablePullDownRefresh": true,  //设置为true表示当前页面开启下拉刷新
+					"app-plus": {
+						"scrollIndicator": false //禁用原生导航栏
+					}
+				}
+			},
+			//  业务主管——首页-新增客户数
+			{
+				"path": "executive/homePage/newCustomer/newCustomer",
+				"style": {
+					"navigationBarTitleText": "新增客户数",
+					"enablePullDownRefresh": true,  //设置为true表示当前页面开启下拉刷新
+					"app-plus": {
+						"scrollIndicator": false //禁用原生导航栏
+					}
+				}
+			},
+			//  业务主管——首页-部门成交额
+			{
+				"path": "executive/homePage/thisMonth/thisMonth",
+				"style": {
+					"navigationBarTitleText": "部门成交额",
+					"app-plus": {
+						"scrollIndicator": false //禁用原生导航栏
+					}
+			
+				}
+			}
+		]
+	},{
+		"root":"pageYwy",
+		"pages":[
+			//  业务员——首页-审核失败提醒
+			{
+				"path": "salesman/homePage/auditDefeatedRemind/auditDefeatedRemind",
+				"style": {
+					"navigationBarTitleText": "审核失败提醒"
+				}
+			},
+			//  业务员——首页-客户个数
+			{
+				"path": "salesman/homePage/client/client",
+				"style": {
+					"navigationBarTitleText": "客户个数",
+					// "navigationStyle": "custom",
+					"app-plus": {
+						"scrollIndicator": false //禁用原生导航栏
+					}
+				}
+			},
+			//  业务员——首页-客户跟进提醒
+			{
+				"path": "clientFollowUpRemind/clientFollowUpRemind",
+				"style": {
+					"navigationBarTitleText": "跟进提醒",
+					// "navigationStyle": "custom",
+					"app-plus": {
+						"scrollIndicator": false //禁用原生导航栏
+					}
+				}
+			},
+			//  业务员——首页-客户跟进提醒-我的客户
+			{
+				"path": "myClient/myClient",
+				"style": {
+					"navigationBarTitleText": "我的客户",
+					// "navigationStyle": "custom",
+					"app-plus": {
+						"scrollIndicator": false //禁用原生导航栏
+					}
+				}
+			},
+			//  业务员——首页-客户跟进提醒-我的客户-跟进
+			{
+				"path": "myClient/followUp/followUp",
+				"style": {
+					"navigationBarTitleText": "跟进",
+					// "navigationStyle": "custom",
+					"app-plus": {
+						"scrollIndicator": false //禁用原生导航栏
+					}
+				}
+			},
+			//  业务员——首页-商机
+			{
+				"path": "salesman/homePage/commercialOpportunity/commercialOpportunity",
+				"style": {
+					"navigationBarTitleText": "商机",
+					"app-plus": {
+						"scrollIndicator": false //禁用原生导航栏
+					}
+				}
+			},
+			
+			//  业务员——订单-任务详情
+			{
+				"path": "salesman/orderForm/taskDetails/taskDetails",
+				"style": {
+					"navigationBarTitleText": "任务详情",
+					"enablePullDownRefresh": true,  //设置为true表示当前页面开启下拉刷新
+					// "navigationStyle": "custom"
+					"app-plus": {
+						"scrollIndicator":"none"//移动端隐藏滚动条
+						 
+					}
+			
+				}
+			},
+			//  业务员——订单-任务详情-合同
+			{
+				"path": "salesman/orderForm/taskDetails/contractData/contractData",
+				"style": {
+					"navigationBarTitleText": "合同资料收集"
+				}
+			},
+			//  业务员——订单-任务详情-资料收集
+			{
+				"path": "salesman/orderForm/taskDetails/dataCollection/dataCollection",
+				"style": {
+					"navigationBarTitleText": "资料收集"
+				}
+			},
+				{
+						"path" : "hetong/contract/contract",
+						"style" :                                                                                    
+						{
+								"navigationBarTitleText": "合同详情",
+								"enablePullDownRefresh": false
+						}
+							
+					}
+					,{
+						"path" : "hetong/contractList/contractList",
+						"style" :                                                                                    
+						{
+								"navigationBarTitleText": "我的合同",
+								"enablePullDownRefresh": false
+						}
+							
+					}
+					,{
+						"path" : "hetong/contractSign/contractSign",
+						"style" :                                                                                    
+						{
+								"navigationBarTitleText": "合同签字",
+								"enablePullDownRefresh": true,
+								"disableScroll": true
+						}
+							
+					}
+					
+		]
+	},{
+		"root":"pageWqzg",
+		"pages":[
+			// 外勤主管-首页-消息提示
+			{
+				"path": "fieldSupervisor/homePage/offTheStocks/offTheStocks",
+				"style": {
+					"navigationBarTitleText": "已完成任务"
+				}
+			
+			},
+			{
+				"path": "fieldSupervisor/homePage/clientSum/clientSum",
+				"style": {
+					"navigationBarTitleText": "客户总数"
+				}
+			},
+			{
+			
+				"path": "fieldSupervisor/homePage/warningTasks/warningTasks",
+				"style": {
+					"navigationBarTitleText": "预警任务"
+				}
+			},
+			//外勤主管-首页- 我的客户数
+			{
+				"path": "fieldSupervisor/homePage/myClient/myClient",
+				"style": {
+					"navigationBarTitleText": "客户",
+					"app-plus": {
+						"scrollIndicator": false //禁用原生导航栏
+					}
+				}
+			},
+			//外勤主管-首页-订单
+			{
+				"path": "fieldSupervisor/homePage/myClient/orderForm/orderForm",
+				"style": {
+					"navigationBarTitleText": "订单",
+					"app-plus": {
+						"scrollIndicator": false //禁用原生导航栏
+					}
+				}
+			},
+			//外勤主管-首页- 我的客户数-跟进
+			{
+			
+				"path": "fieldSupervisor/homePage/myClient/followUp/followUp",
+			
+				"style": {
+					"navigationBarTitleText": "跟进"
+				}
+			},
+			//外勤主管-首页- 我的客户数-跟进-查看跟进记录
+			{
+			
+				"path": "fieldSupervisor/homePage/myClient/followUp/lookOrFllow/lookOrFllow",
+			
+				"style": {
+					"navigationBarTitleText": "查看跟进记录"
+					
+				}
+			},
+			// 任务详情
+			{
+				"path": "fieldSupervisor/homePage/detailPage/detailPage",
+				"style": {
+					"navigationBarTitleText": "任务详情"
+					
+				}
+			},
+			// 任务详情-照片显示
+			{
+				"path": "fieldSupervisor/homePage/detailPage/photograph/photograph",
+				"style": {
+					"navigationBarTitleText": "照片显示"
+					
+				}
+			}
+			
+		]
+	},{
+		"root":"pageWq",
+		"pages":[
+
+			{
+				"path": "fieldClerk/taskEarlyWarning/taskEarlyWarning",
+				"style": {
+					"navigationBarTitleText": "预警任务"
+				}
+			},
+			{
+				"path": "fieldClerk/myClient/myClient",
+				"style": {
+					"navigationBarTitleText": "我的客户"
+				}
+			},
+			// 首页——我的客户数-订单
+			{
+				"path": "fieldClerk/myClient/orderForm/orderForm",
+				"style": {
+					"navigationBarTitleText": "订单"
+				}
+			},
+			{
+				"path": "fieldClerk/taskNumber/taskNumber",
+				"style": {
+					"navigationBarTitleText": "预警任务"
+				}
+			},
+			// 点击消息记录跳转的任务页面
+			{
+				"path": "fieldClerk/task/task",
+				"style": {
+					"navigationBarTitleText": "任务"
+				}
+			},
+			// 外勤办事员-任务-任务详情
+			{
+				"path": "fieldClerk/missionDetails/missionDetails",
+				"style": {
+					"navigationBarTitleText": "任务详情",
+					"app-plus": {
+						"scrollIndicator": false //禁用原生导航栏
+					}
+				}
+			},
+			// 外勤办事员-任务-任务详情-图片上传
+			{
+				"path": "fieldClerk/missionDetails/label/label",
+				"style": {
+					"navigationBarTitleText": "图片上传",
+					"app-plus": {
+						"scrollIndicator": false //禁用原生导航栏
+					}
+				}
+			}
+			
+		]
+	},{
+		"root":"pageSet",
+		"pages":[
+			// 账户设置
+			{
+				"path": "accountSet/accountSet",
+				"style": {
+					"navigationBarTitleText": "账户设置",
+					"navigationStyle": "custom",
+					"app-plus": {
+						"scrollIndicator": false //禁用原生导航栏
+					}
+			
+				}
+			},
+			// 更换手机号
+			{
+				"path": "accountSet/alterPhone/alterPhone",
+				"style": {
+					"navigationBarTitleText": "更换手机号码",
+					"navigationStyle": "custom",
+					"app-plus": {
+						"scrollIndicator": false //禁用原生导航栏
+					}
+				}
+			},
+			// 更换手机号-填写新的手机号
+			{
+				"path": "accountSet/alterPhone/tow",
+				"style": {
+					"navigationBarTitleText": "更换手机号码",
+					"navigationStyle": "custom",
+					"app-plus": {
+						"scrollIndicator": false //禁用原生导航栏
+					}
+				}
+			},
+			// 更改密码
+			{
+				"path": "accountSet/changePassword/changePassword",
+				"style": {
+					"navigationBarTitleText": "更改密码",
+					// "navigationStyle": "custom",
+					"app-plus": {
+						"scrollIndicator": false //禁用原生导航栏
+					}
+				}
+			},
+			{
+				"path": "accountSet/changeName/changeName",
+				"style": {
+					"navigationBarTitleText": "更改昵称",
+					// "navigationStyle": "custom",
+					"app-plus": {
+						"scrollIndicator": false //禁用原生导航栏
+					}
+				}
+			}
+			
+		]
+	},
+	{
+		"root":"pageKh",
+		"pages":[
+			// 客户——首页-订单详情
+			{
+				"path": "theOrderDetails/theOrderDetails",
+				"style": {
+					"navigationBarTitleText": "订单详情",
+					"app-plus": {
+						"scrollIndicator": false //禁用原生导航栏
+					}
+				}
+			},
+			// 客户——首页-订单详情-资料
+			{
+				"path": "theOrderDetails/dataCollection/dataCollection",
+				"style": {
+					"navigationBarTitleText": "资料",
+					"app-plus": {
+						"scrollIndicator": false //禁用原生导航栏
+					}
+				}
+			},
+			// 客户——首页-订单详情-我的合同
+			{
+				"path": "theOrderDetails/contractList/contractList",
+				"style": {
+					"navigationBarTitleText": "我的合同",
+					"app-plus": {
+						"scrollIndicator": false //禁用原生导航栏
+					}
+				}
+			},
+			// 客户——首页-订单详情-合同详情
+			{
+				"path": "theOrderDetails/contract/contract",
+				"style": {
+					"navigationBarTitleText": "合同",
+					"app-plus": {
+						"scrollIndicator": false //禁用原生导航栏
+					}
+				}
+			},
+			// 客户——我的-订单
+			{
+				"path": "myOrderForm/myOrderForm",
+				"style": {
+					"navigationBarTitleText": "我的订单",
+					"app-plus": {
+						"scrollIndicator": false //禁用原生导航栏
+					}
+				}
+			},
+			// 客户——我的-我的合同
+			{
+					"path" : "hetong/contract/contract",
+					"style" :                                                                                    
+					{
+							"navigationBarTitleText": "合同详情",
+							"enablePullDownRefresh": false
+					}
+						
+				}
+				,{
+					"path" : "hetong/contractList/contractList",
+					"style" :                                                                                    
+					{
+							"navigationBarTitleText": "我的合同",
+							"enablePullDownRefresh": false
+					}
+						
+				}
+				,{
+					"path" : "hetong/contractSign/contractSign",
+					"style" :                                                                                    
+					{
+							"navigationBarTitleText": "合同签字",
+							"enablePullDownRefresh": true,
+							"disableScroll": true
+					}
+						
+				}
+
+			
+		]
+	}
+	],
+	"preloadRule": {
+		"pages/login/index":{
+		    "network": "all",
+		    "packages": ["pageWq","pageWqzg","pageYwy","pageBoss","pageYwzg","pageKh"]
+		},
+		"pages/mixtureBox/mixtureBox":{
+	        "network": "all",
+	        "packages": ["pageWq","pageWqzg","pageYwy","pageBoss","pageYwzg","pageKh"]
+	    },
+		"pages/home/index":{
+		    "network": "all",
+		    "packages": ["pageWq","pageWqzg","pageYwy","pageBoss","pageYwzg","pageKh"]
+		},
+		"pages/messageBox/messageBox":{
+		    "network": "all",
+		    "packages": ["pageWq","pageWqzg","pageYwy","pageBoss","pageYwzg","pageKh"]
+		},
+		"pages/missionBox/missionBox":{
+		    "network": "all",
+		    "packages": ["pageWq","pageWqzg","pageYwy","pageBoss","pageYwzg","pageKh"]
+		},
+		"pages/mine/mine":{
+		    "network": "all",
+		    "packages": ["pageWq","pageWqzg","pageYwy","pageBoss","pageYwzg","pageKh"]
+		}
+	},
+	"globalStyle": {
+		"navigationBarTextStyle": "black",
+		"navigationBarTitleText": "uView",
+		"navigationBarBackgroundColor": "#FFFFFF",
+		"backgroundColor": "#FFFFFF",
+		"app-plus":{
+		
+		"scrollIndicator":"none" //全局 在APP页面都不显示滚动条
+		
+		}
+	},
+	"tabBar": {
+		"color": "#87898C",
+				"selectedColor": "#3A3B3D",
+				"backgroundColor": "#FFFFFF",
+				"borderStyle": "black",
+				"list": [
+					
+					//统一首页
+					{
+						"pagePath": "pages/home/index",
+						"iconPath": "static/image/unHomePage.png",
+						"selectedIconPath": "static/image/homePage.png",
+						"text": "首页"
+					},
+					// 统一--混合
+					{
+						"pagePath": "pages/mixtureBox/mixtureBox",
+						"iconPath": "static/image/unTask.png",
+						"selectedIconPath": "static/image/task.png",
+						"text": "待办事项"
+					},
+					// 统一消息  外勤主管消息提醒    外勤办事员任务进度提醒   业务员订单  boss代办事项
+					{
+						"pagePath": "pages/messageBox/messageBox",
+						"iconPath": "static/image/unHomePage.png",
+						"selectedIconPath": "static/image/homePage.png",
+						"text": "消息"
+					},
+					// 统一任务
+					{
+						"pagePath": "pages/missionBox/missionBox",
+						"iconPath": "static/image/unTask.png",
+						"selectedIconPath": "static/image/task.png",
+						"text": "任务"
+					},
+					{
+						"pagePath": "pages/mine/mine",
+						"iconPath": "static/image/unMine.png",
+						"selectedIconPath": "static/image/mine.png",
+						"text": "我的"
+					}
+				]
+	}
+}
